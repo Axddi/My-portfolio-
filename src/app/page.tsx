@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import DarkVeilBackground from "@/components/background/AnimatedBackground";
 import { motion } from "framer-motion";
 import {
   Github,
@@ -959,7 +958,6 @@ function Footer() {
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <DarkVeilBackground />
       <Navigation />
       <HeroSection />
       <AboutSection />
