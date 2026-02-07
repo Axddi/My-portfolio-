@@ -521,6 +521,15 @@ function ProjectsSection() {
       featured: false,
     },
     {
+      title: "Segmentify",
+      description:
+        "Built a full-stack SaaS platform enabling users to upload and query documents with AI-driven summaries.",
+      tech: ["JavaScript", "Langchain", "Prisma", "TRPC", "ZOD"],
+      github: "https://github.com/AAbhinVV/Segmentify",
+      demo: null,
+      featured: false,
+    },
+    {
       title: "RecipeCraft",
       description:
         "Recipe Craft generates recipe entered by the user and gives the user various recipes based on it.",
