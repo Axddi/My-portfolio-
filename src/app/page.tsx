@@ -493,6 +493,15 @@ function SkillsSection() {
 // Projects Section
 function ProjectsSection() {
   const projects = [
+        {
+      title: "MeetMind-AI",
+      description:
+      "Turn long meetings into clear decisions. MeetMind AI is an AI-powered meeting intelligence platform that transforms raw meeting transcripts into summaries, actions items, sentiment analysis",
+      tech: ["Terraform", "AWS", "S3", "Bedrock", "Lambda"],
+      github: "https://github.com/Axddi/MEETMIND-AI",
+      demo: null,
+      featured: true,
+    },
     {
       title: "kubeforge-cicd-platform",
       description:
