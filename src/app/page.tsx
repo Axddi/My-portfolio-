@@ -770,7 +770,7 @@ function ResumeSection() {
             Download Resume (PDF)
           </motion.a>
           <p className="text-muted-foreground text-sm mt-4">
-            Last updated: February 2025
+            Last updated: March 2026
           </p>
         </motion.div>
       </div>
