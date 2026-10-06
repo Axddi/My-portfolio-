@@ -161,17 +161,17 @@ function HeroSection() {
               transition={{ delay: 0.2 }}
               className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6"
             >
-              DevOps and Cloud computing
+              Cloud, DevOps & Generative AI
             </motion.span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
               Hi, I&apos;m{" "}
               <span className="gradient-text">Aaditya Saxena</span>
             </h1>
             <h2 className="text-xl sm:text-2xl lg:text-3xl text-muted-foreground mb-6">
-              DevOps & Cloud Engineer | Cloud Automation Enthusiast
+              Cloud & DevOps Engineer | Generative AI & AIOps Enthusiast
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-lg">
-             Turning ideas into automated, scalable cloud solutions.
+             Building scalable cloud infrastructure, automated workflows, and AI-powered solutions.
             </p>
             <div className="flex flex-wrap gap-4">
               <motion.a
@@ -305,18 +305,26 @@ function AboutSection() {
             viewport={{ once: true }}
           >
             <h3 className="text-2xl font-bold mb-4">
-              Pre final Year B.Tech Student & Cloud Enthusiast
+              Final Year B.Tech Student | Cloud, DevOps & GenAI
             </h3>
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              I&apos;m a passionate pre final year B.Tech Computer Science student specializing in 
-              Cloud Computing and Automation. With a strong foundation in DevOps practices, 
-              I love building scalable, reliable, and automated infrastructure solutions.
+              I&apos;m a final year B.Tech Computer Science student specializing in 
+              Cloud Computing and Automation. I&apos;m passionate about cloud infrastructure, DevOps, 
+              Generative AI, and building scalable, reliable, and automated solutions.
             </p>
+            <div className="mb-6 p-4 bg-card rounded-lg border border-border">
+              <h4 className="font-semibold mb-1">Current Role</h4>
+              <p className="text-muted-foreground text-sm">
+                Trainee at <b>NEC Corporation India</b>, working with AWS, Generative AI,
+                Amazon Bedrock, and AIOps for enterprise cloud solutions.
+              </p>
+            </div>
+
             <p className="text-muted-foreground mb-6 leading-relaxed">
               My journey in tech started with a curiosity about how large-scale applications 
-              are deployed and managed. This led me to explore the world of cloud computing, 
-              containerization, and infrastructure as code. Today, I actively contribute to 
-              open-source projects and enjoy sharing my knowledge with the community.
+              are deployed and managed. This led me to explore AWS, containerization, infrastructure 
+              as code, CI/CD, and Generative AI. I now apply these technologies through projects and 
+              my work as a Trainee at NEC Corporation India.
             </p>
 
             <div className="space-y-4">
@@ -330,7 +338,7 @@ function AboutSection() {
                     B.Tech in Computer Science - Specialization in Cloud Computing and Automation
                   </p>
                   <p className="text-muted-foreground text-sm">
-                    VIT Bhopal Univesity | 2023-2027 | 8.08/10 CGPA
+                    VIT Bhopal University | 2023-2027 | 8.3/10 CGPA
                   </p>
                 </div>
               </div>
@@ -342,7 +350,7 @@ function AboutSection() {
                 <div>
                   <h4 className="font-semibold">Career Goal</h4>
                   <p className="text-muted-foreground text-sm">
-                   To become a Cloud Solutions Architect who designs and implements enterprise-grade cloud infrastructure that drives business innovation.
+                   To build scalable cloud, DevOps, and AI solutions that solve real-world enterprise problems.
                   </p>
                 </div>
               </div>
@@ -391,8 +399,7 @@ function SkillsSection() {
       skills: [
         { name: "AWS", color: "#FF9900" },
         { name: "Azure", color: "#0078D4" },
-        { name: "GCP", color: "#4285F4" },
-      ],
+              ],
     },
     {
       title: "DevOps Tools",
@@ -403,9 +410,10 @@ function SkillsSection() {
         { name: "Kubernetes", color: "#326CE5" },
         { name: "Terraform", color: "#7B42BC" },
         { name: "GitHub Actions", color: "#2088FF" },
+        { name: "Prometheus", color: "#E6522C" },
+        { name: "Grafana", color: "#F46800" },
         { name: "Jenkins", color: "#D24939" },
-        { name: "Ansible", color: "#EE0000" },
-      ],
+              ],
     },
     {
       title: "Programming",
@@ -414,6 +422,8 @@ function SkillsSection() {
       skills: [
         { name: "Java", color: "#ED8B00" },
         { name: "Python", color: "#3776AB" },
+        { name: "Go", color: "#00ADD8" },
+        { name: "JavaScript", color: "#F7DF1E" },
       ],
     },
     {
@@ -424,13 +434,19 @@ function SkillsSection() {
         { name: "PostgreSQL", color: "#4169E1" },
         { name: "Linux", color: "#FCC624" },
         { name: "Ubuntu", color: "#E95420" },
+        { name: "MySQL", color: "#4479A1" },
+        { name: "DynamoDB", color: "#4053D6" },
       ],
     },
     {
-      title: "Monitoring",
+      title: "Generative AI & AIOps",
       icon: Activity,
       color: "from-cyan-500 to-blue-500",
       skills: [
+        { name: "Amazon Bedrock", color: "#FF9900" },
+        { name: "RAG", color: "#7B42BC" },
+        { name: "AIOps", color: "#326CE5" },
+        { name: "PyTorch", color: "#EE4C2C" },
         { name: "Prometheus", color: "#E6522C" },
         { name: "Grafana", color: "#F46800" },
       ],
@@ -494,19 +510,19 @@ function SkillsSection() {
 function ProjectsSection() {
   const projects = [
         {
-      title: "MeetMind-AI",
+      title: "BluStellar AISOP",
       description:
-      "Turn long meetings into clear decisions. MeetMind AI is an AI-powered meeting intelligence platform that transforms raw meeting transcripts into summaries, actions items, sentiment analysis",
-      tech: ["Terraform", "AWS", "S3", "Bedrock", "Lambda"],
-      github: "https://github.com/Axddi/MEETMIND-AI",
+      "AI-powered AIOps platform that analyzes cloud incidents, retrieves relevant approved SOPs using RAG, and provides controlled, auditable remediation recommendations.",
+      tech: ["AWS", "Bedrock", "RAG", "PostgreSQL", "ECS"],
+      github: "https://github.com/Axddi",
       demo: null,
       featured: true,
     },
     {
       title: "kubeforge-cicd-platform",
       description:
-        "Production-grade CI/CD platform on AWS using Terraform, Jenkins, Kubernetes (EKS), Blue-Green deployments, and Prometheus monitoring.",
-      tech: ["Terraform", "AWS", "Jenikins", "Kubernetes", "Docker"],
+        "Production-grade CI/CD platform on AWS using Terraform, Jenkins, Kubernetes (EKS), Blue-Green deployments, Docker, and Prometheus.",
+      tech: ["Terraform", "AWS", "Jenkins", "Kubernetes", "Docker"],
       github: "https://github.com/Axddi/kubeforge-cicd-platform",
       demo: null,
       featured: true,
@@ -514,18 +530,18 @@ function ProjectsSection() {
     {
       title: "cloud-cost-intelligence",
       description:
-        "A serverless AWS-based cloud cost monitoring platform that tracks daily service-wise costs, stores history, exposes a read-only API, and visualizes spending via a modern dashboard—provisioned using Terraform.",
-      tech: ["Terraform", "AWS", "Cloudfront", "SNS", "Python"],
+        "Serverless AWS FinOps platform that tracks cloud costs, stores historical usage, sends alerts, and visualizes spending through a dashboard provisioned with Terraform.",
+      tech: ["Terraform", "AWS", "Lambda", "DynamoDB", "SNS"],
       github: "https://github.com/Axddi/cloud-cost-intelligence",
       demo: null,
       featured: true,
     },
     {
-      title: "neuro-sync",
+      title: "AI DevOps Copilot",
       description:
-        "Designed with scalable architecture, CI/CD, and infrastructure-as-code, it is built to evolve into a secure, production-ready healthcare system.",
-      tech: ["Next.js", "Terraform", "AWS", "GitHub Actions"],
-      github: "https://github.com/Axddi/neuro-sync",
+        "AI-powered DevOps platform for Kubernetes incident analysis, automated diagnostics, SRE dashboards, and cloud infrastructure managed through Terraform.",
+      tech: ["Next.js", "FastAPI", "Kubernetes", "Terraform", "AWS"],
+      github: "https://github.com/Axddi/ai-devops-copilot",
       demo: null,
       featured: false,
     },
@@ -770,7 +786,7 @@ function ResumeSection() {
             Download Resume (PDF)
           </motion.a>
           <p className="text-muted-foreground text-sm mt-4">
-            Last updated: March 2026
+            Last updated: October 2026
           </p>
         </motion.div>
       </div>
