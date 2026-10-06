@@ -648,21 +648,18 @@ function ProjectsSection() {
     </motion.a>
   )}
 
-  {project.demo && (
-              
-                {project.demo && (
-                  <motion.a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.05 }}
-                    className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-medium hover:bg-primary/90 transition-colors"
-                  >
-                    <ExternalLink size={16} />
-                    Demo
-                  </motion.a>
-                )}
-              </div>
+{project.demo && (
+  <motion.a
+    href={project.demo}
+    target="_blank"
+    rel="noopener noreferrer"
+    whileHover={{ scale: 1.05 }}
+    className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-medium hover:bg-primary/90 transition-colors"
+  >
+    <ExternalLink size={16} />
+    Demo
+  </motion.a>
+)}
             </motion.div>
           ))}
         </div>
