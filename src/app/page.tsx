@@ -90,24 +90,38 @@ function Navigation() {
                 {item.name}
               </motion.a>
             ))}
+
             <button
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              onClick={() =>
+                setTheme(theme === "dark" ? "light" : "dark")
+              }
               className="p-2 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors"
               aria-label="Toggle theme"
             >
-              {mounted && theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+              {mounted && theme === "dark" ? (
+                <Sun size={20} />
+              ) : (
+                <Moon size={20} />
+              )}
             </button>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="flex md:hidden items-center gap-4">
             <button
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              onClick={() =>
+                setTheme(theme === "dark" ? "light" : "dark")
+              }
               className="p-2 rounded-lg bg-secondary"
               aria-label="Toggle theme"
             >
-              {mounted && theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+              {mounted && theme === "dark" ? (
+                <Sun size={20} />
+              ) : (
+                <Moon size={20} />
+              )}
             </button>
+
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 rounded-lg bg-secondary"
@@ -164,16 +178,21 @@ function HeroSection() {
             >
               Cloud, DevOps & Generative AI
             </motion.span>
+
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
               Hi, I&apos;m{" "}
               <span className="gradient-text">Aaditya Saxena</span>
             </h1>
+
             <h2 className="text-xl sm:text-2xl lg:text-3xl text-muted-foreground mb-6">
               Cloud & DevOps Engineer | Generative AI & AIOps Enthusiast
             </h2>
+
             <p className="text-lg text-muted-foreground mb-8 max-w-lg">
-             Building scalable cloud infrastructure, automated workflows, and AI-powered solutions.
+              Building scalable cloud infrastructure, automated workflows, and
+              AI-powered solutions.
             </p>
+
             <div className="flex flex-wrap gap-4">
               <motion.a
                 href="#projects"
@@ -184,6 +203,7 @@ function HeroSection() {
                 <Code size={20} />
                 View Projects
               </motion.a>
+
               <motion.a
                 href="#resume"
                 whileHover={{ scale: 1.05 }}
@@ -193,6 +213,7 @@ function HeroSection() {
                 <Download size={20} />
                 Download Resume
               </motion.a>
+
               <motion.a
                 href="#contact"
                 whileHover={{ scale: 1.05 }}
@@ -203,6 +224,7 @@ function HeroSection() {
                 Contact Me
               </motion.a>
             </div>
+
             <div className="flex gap-4 mt-8">
               <motion.a
                 href="https://github.com/Axddi"
@@ -213,6 +235,7 @@ function HeroSection() {
               >
                 <Github size={24} />
               </motion.a>
+
               <motion.a
                 href="https://www.linkedin.com/in/aaditya-saxena22/"
                 target="_blank"
@@ -222,6 +245,7 @@ function HeroSection() {
               >
                 <Linkedin size={24} />
               </motion.a>
+
               <motion.a
                 href="mailto:aaditya.saxena.1357@gmail.com"
                 whileHover={{ scale: 1.1, y: -2 }}
@@ -240,9 +264,11 @@ function HeroSection() {
           >
             <div className="relative w-full aspect-square max-w-md mx-auto">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-accent/20 to-primary/20 rounded-full blur-3xl animate-pulse" />
+
               <div className="relative z-10 w-full h-full bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center">
                 <div className="text-8xl text-white font-bold">Aaditya</div>
               </div>
+
               {/* Floating icons */}
               <motion.div
                 animate={{ y: [0, -10, 0] }}
@@ -251,23 +277,38 @@ function HeroSection() {
               >
                 <Box size={32} className="text-[#2496ED]" />
               </motion.div>
+
               <motion.div
                 animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 3, repeat: Infinity, delay: 0.5 }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  delay: 0.5,
+                }}
                 className="absolute top-1/4 -left-8 p-4 bg-card rounded-xl shadow-lg border border-border"
               >
                 <Layers size={32} className="text-[#326CE5]" />
               </motion.div>
+
               <motion.div
                 animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 3, repeat: Infinity, delay: 1 }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  delay: 1,
+                }}
                 className="absolute bottom-1/4 -right-8 p-4 bg-card rounded-xl shadow-lg border border-border"
               >
                 <Settings size={32} className="text-[#7B42BC]" />
               </motion.div>
+
               <motion.div
                 animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 3, repeat: Infinity, delay: 1.5 }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  delay: 1.5,
+                }}
                 className="absolute -bottom-4 left-1/4 p-4 bg-card rounded-xl shadow-lg border border-border"
               >
                 <Cloud size={32} className="text-[#FF9900]" />
@@ -294,6 +335,7 @@ function AboutSection() {
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             About <span className="gradient-text">Me</span>
           </h2>
+
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Get to know me better
           </p>
@@ -308,24 +350,29 @@ function AboutSection() {
             <h3 className="text-2xl font-bold mb-4">
               Final Year B.Tech Student | Cloud, DevOps & GenAI
             </h3>
+
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              I&apos;m a final year B.Tech Computer Science student specializing in 
-              Cloud Computing and Automation. I&apos;m passionate about cloud infrastructure, DevOps, 
-              Generative AI, and building scalable, reliable, and automated solutions.
+              I&apos;m a final year B.Tech Computer Science student
+              specializing in Cloud Computing and Automation. I&apos;m
+              passionate about cloud infrastructure, DevOps, Generative AI,
+              and building scalable, reliable, and automated solutions.
             </p>
+
             <div className="mb-6 p-4 bg-card rounded-lg border border-border">
               <h4 className="font-semibold mb-1">Current Role</h4>
               <p className="text-muted-foreground text-sm">
-                Trainee at <b>NEC Corporation India</b>, working with AWS, Generative AI,
-                Amazon Bedrock, and AIOps for enterprise cloud solutions.
+                Trainee at <b>NEC Corporation India</b>, working with AWS,
+                Generative AI, Amazon Bedrock, and AIOps for enterprise cloud
+                solutions.
               </p>
             </div>
 
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              My journey in tech started with a curiosity about how large-scale applications 
-              are deployed and managed. This led me to explore AWS, containerization, infrastructure 
-              as code, CI/CD, and Generative AI. I now apply these technologies through projects and 
-              my work as a Trainee at NEC Corporation India.
+              My journey in tech started with a curiosity about how large-scale
+              applications are deployed and managed. This led me to explore
+              AWS, containerization, infrastructure as code, CI/CD, and
+              Generative AI. I now apply these technologies through projects
+              and my work as a Trainee at NEC Corporation India.
             </p>
 
             <div className="space-y-4">
@@ -333,11 +380,15 @@ function AboutSection() {
                 <div className="p-2 bg-primary/10 rounded-lg">
                   <Award className="text-primary" size={24} />
                 </div>
+
                 <div>
                   <h4 className="font-semibold">Education</h4>
+
                   <p className="text-muted-foreground text-sm">
-                    B.Tech in Computer Science - Specialization in Cloud Computing and Automation
+                    B.Tech in Computer Science - Specialization in Cloud
+                    Computing and Automation
                   </p>
+
                   <p className="text-muted-foreground text-sm">
                     VIT Bhopal University | 2023-2027 | 8.3/10 CGPA
                   </p>
@@ -348,10 +399,13 @@ function AboutSection() {
                 <div className="p-2 bg-accent/10 rounded-lg">
                   <Cloud className="text-accent" size={24} />
                 </div>
+
                 <div>
                   <h4 className="font-semibold">Career Goal</h4>
+
                   <p className="text-muted-foreground text-sm">
-                   To build scalable cloud, DevOps, and AI solutions that solve real-world enterprise problems.
+                    To build scalable cloud, DevOps, and AI solutions that
+                    solve real-world enterprise problems.
                   </p>
                 </div>
               </div>
@@ -367,8 +421,8 @@ function AboutSection() {
             {[
               { icon: Cloud, label: "Cloud Projects", value: "5+" },
               { icon: Server, label: "Deployments", value: "10+" },
-              { icon: Code, label: "Repositories", value: "5+"},
-              { icon: Award, label: "Certifications", value: "7"},
+              { icon: Code, label: "Repositories", value: "5+" },
+              { icon: Award, label: "Certifications", value: "7" },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -378,9 +432,18 @@ function AboutSection() {
                 transition={{ delay: index * 0.1 }}
                 className="p-6 bg-card rounded-xl border border-border text-center card-hover"
               >
-                <stat.icon className="mx-auto mb-3 text-primary" size={32} />
-                <div className="text-3xl font-bold gradient-text mb-1">{stat.value}</div>
-                <div className="text-muted-foreground text-sm">{stat.label}</div>
+                <stat.icon
+                  className="mx-auto mb-3 text-primary"
+                  size={32}
+                />
+
+                <div className="text-3xl font-bold gradient-text mb-1">
+                  {stat.value}
+                </div>
+
+                <div className="text-muted-foreground text-sm">
+                  {stat.label}
+                </div>
               </motion.div>
             ))}
           </motion.div>
@@ -400,7 +463,7 @@ function SkillsSection() {
       skills: [
         { name: "AWS", color: "#FF9900" },
         { name: "Azure", color: "#0078D4" },
-              ],
+      ],
     },
     {
       title: "DevOps Tools",
@@ -414,7 +477,7 @@ function SkillsSection() {
         { name: "Prometheus", color: "#E6522C" },
         { name: "Grafana", color: "#F46800" },
         { name: "Jenkins", color: "#D24939" },
-              ],
+      ],
     },
     {
       title: "Programming",
@@ -466,6 +529,7 @@ function SkillsSection() {
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             Technical <span className="gradient-text">Skills</span>
           </h2>
+
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Technologies and tools I work with
           </p>
@@ -482,11 +546,15 @@ function SkillsSection() {
               className="bg-card rounded-xl border border-border p-6 card-hover"
             >
               <div className="flex items-center gap-3 mb-6">
-                <div className={`p-3 rounded-lg bg-gradient-to-r ${category.color}`}>
+                <div
+                  className={`p-3 rounded-lg bg-gradient-to-r ${category.color}`}
+                >
                   <category.icon className="text-white" size={24} />
                 </div>
+
                 <h3 className="text-xl font-bold">{category.title}</h3>
               </div>
+
               <div className="flex flex-wrap gap-3">
                 {category.skills.map((skill) => (
                   <motion.div
@@ -495,7 +563,10 @@ function SkillsSection() {
                     className="flex items-center gap-2 px-3 py-2 bg-secondary rounded-lg"
                   >
                     <TechIcon name={skill.name} color={skill.color} />
-                    <span className="text-sm font-medium">{skill.name}</span>
+
+                    <span className="text-sm font-medium">
+                      {skill.name}
+                    </span>
                   </motion.div>
                 ))}
               </div>
@@ -538,34 +609,39 @@ function ProjectsSection() {
       featured: false,
     },
     {
-  title: "MeetMind-AI",
-  description:
-    "AI-powered meeting intelligence platform that transforms meeting transcripts into concise summaries, action items, and insights using AWS and Generative AI.",
-  tech: ["AWS", "Terraform", "S3", "Transcribe", "Bedrock", "DynamoDB"],
-  github: "https://github.com/Axddi/MEETMIND-AI",
-  demo: null,
-  featured: true,
-},
-
-{
-  title: "NeuroSync",
-  description:
-    "Scalable healthcare application designed with modern cloud architecture, infrastructure-as-code, and CI/CD automation for secure and reliable deployment.",
-  tech: ["Next.js", "AWS", "Terraform", "GitHub Actions"],
-  github: "https://github.com/Axddi/neuro-sync",
-  demo: null,
-  featured: true,
-},
-
-{
-  title: "HoneyRatan",
-  description:
-    "Freelance food delivery application built for a real-world client, featuring a Flutter mobile frontend, Node.js backend, and MySQL database for managing users, restaurants, orders, and delivery workflows.",
-  tech: ["Flutter", "Node.js", "MySQL", "REST API"],
-  github: null,
-  demo: null,
-  featured: true,
-},
+      title: "MeetMind-AI",
+      description:
+        "AI-powered meeting intelligence platform that transforms meeting transcripts into concise summaries, action items, and insights using AWS and Generative AI.",
+      tech: [
+        "AWS",
+        "Terraform",
+        "S3",
+        "Transcribe",
+        "Bedrock",
+        "DynamoDB",
+      ],
+      github: "https://github.com/Axddi/MEETMIND-AI",
+      demo: null,
+      featured: true,
+    },
+    {
+      title: "NeuroSync",
+      description:
+        "Scalable healthcare application designed with modern cloud architecture, infrastructure-as-code, and CI/CD automation for secure and reliable deployment.",
+      tech: ["Next.js", "AWS", "Terraform", "GitHub Actions"],
+      github: "https://github.com/Axddi/neuro-sync",
+      demo: null,
+      featured: true,
+    },
+    {
+      title: "HoneyRatan",
+      description:
+        "Freelance food delivery application built for a real-world client, featuring a Flutter mobile frontend, Node.js backend, and MySQL database for managing users, restaurants, orders, and delivery workflows.",
+      tech: ["Flutter", "Node.js", "MySQL", "REST API"],
+      github: null,
+      demo: null,
+      featured: true,
+    },
     {
       title: "Segmentify",
       description:
@@ -598,6 +674,7 @@ function ProjectsSection() {
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             Featured <span className="gradient-text">Projects</span>
           </h2>
+
           <p className="text-muted-foreground max-w-2xl mx-auto">
             A collection of projects showcasing my cloud and DevOps expertise
           </p>
@@ -612,7 +689,9 @@ function ProjectsSection() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               className={`bg-card rounded-xl border border-border p-6 card-hover flex flex-col ${
-                project.featured ? "lg:col-span-1 ring-2 ring-primary/20" : ""
+                project.featured
+                  ? "lg:col-span-1 ring-2 ring-primary/20"
+                  : ""
               }`}
             >
               {project.featured && (
@@ -620,10 +699,15 @@ function ProjectsSection() {
                   Featured
                 </span>
               )}
-              <h3 className="text-xl font-bold mb-3">{project.title}</h3>
+
+              <h3 className="text-xl font-bold mb-3">
+                {project.title}
+              </h3>
+
               <p className="text-muted-foreground text-sm mb-4 flex-grow">
                 {project.description}
               </p>
+
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.tech.map((tech) => (
                   <span
@@ -634,32 +718,35 @@ function ProjectsSection() {
                   </span>
                 ))}
               </div>
-            <div className="flex gap-3">
-  {project.github && (
-    <motion.a
-      href={project.github}
-      target="_blank"
-      rel="noopener noreferrer"
-      whileHover={{ scale: 1.05 }}
-      className="flex items-center gap-2 px-4 py-2 bg-secondary rounded-lg text-sm font-medium hover:bg-secondary/80 transition-colors"
-    >
-      <Github size={16} />
-      Code
-    </motion.a>
-  )}
 
-{project.demo && (
-  <motion.a
-    href={project.demo}
-    target="_blank"
-    rel="noopener noreferrer"
-    whileHover={{ scale: 1.05 }}
-    className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-medium hover:bg-primary/90 transition-colors"
-  >
-    <ExternalLink size={16} />
-    Demo
-  </motion.a>
-)}
+              {/* Project Buttons */}
+              <div className="flex gap-3">
+                {project.github && (
+                  <motion.a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.05 }}
+                    className="flex items-center gap-2 px-4 py-2 bg-secondary rounded-lg text-sm font-medium hover:bg-secondary/80 transition-colors"
+                  >
+                    <Github size={16} />
+                    Code
+                  </motion.a>
+                )}
+
+                {project.demo && (
+                  <motion.a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.05 }}
+                    className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-medium hover:bg-primary/90 transition-colors"
+                  >
+                    <ExternalLink size={16} />
+                    Demo
+                  </motion.a>
+                )}
+              </div>
             </motion.div>
           ))}
         </div>
@@ -727,7 +814,10 @@ function CertificationsSection() {
   ];
 
   return (
-    <section id="certifications" className="py-20 px-4 bg-secondary/30">
+    <section
+      id="certifications"
+      className="py-20 px-4 bg-secondary/30"
+    >
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -736,10 +826,13 @@ function CertificationsSection() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            Professional <span className="gradient-text">Certifications</span>
+            Professional{" "}
+            <span className="gradient-text">Certifications</span>
           </h2>
+
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Industry-recognized certifications validating my cloud and DevOps expertise
+            Industry-recognized certifications validating my cloud and DevOps
+            expertise
           </p>
         </motion.div>
 
@@ -757,10 +850,15 @@ function CertificationsSection() {
                 className="mx-auto mb-4 p-4 rounded-xl"
                 style={{ backgroundColor: `${cert.color}20` }}
               >
-                <Award size={32} style={{ color: cert.color }} />
+                <Award
+                  size={32}
+                  style={{ color: cert.color }}
+                />
               </div>
 
-              <h3 className="font-bold text-lg mb-2">{cert.title}</h3>
+              <h3 className="font-bold text-lg mb-2">
+                {cert.title}
+              </h3>
 
               <p className="text-muted-foreground text-sm mb-1">
                 {cert.issuer}
@@ -781,7 +879,6 @@ function CertificationsSection() {
   );
 }
 
-
 // Resume Section
 function ResumeSection() {
   return (
@@ -795,9 +892,12 @@ function ResumeSection() {
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             Download My <span className="gradient-text">Resume</span>
           </h2>
+
           <p className="text-muted-foreground mb-8">
-            Get a comprehensive overview of my experience, skills, and education
+            Get a comprehensive overview of my experience, skills, and
+            education
           </p>
+
           <motion.a
             href="/Aaditya_Saxena_resume.pdf"
             download
@@ -808,6 +908,7 @@ function ResumeSection() {
             <Download size={24} />
             Download Resume (PDF)
           </motion.a>
+
           <p className="text-muted-foreground text-sm mt-4">
             Last updated: October 2026
           </p>
@@ -816,12 +917,15 @@ function ResumeSection() {
     </section>
   );
 }
+
 // Contact Section
 function ContactSection() {
   return (
-    <section id="contact" className="py-20 px-4 bg-secondary/30">
+    <section
+      id="contact"
+      className="py-20 px-4 bg-secondary/30"
+    >
       <div className="max-w-4xl mx-auto">
-
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -841,7 +945,6 @@ function ContactSection() {
 
         {/* Contact Cards */}
         <div className="grid sm:grid-cols-2 gap-6">
-
           {/* Email */}
           <motion.a
             href="mailto:aaditya.saxena.1357@gmail.com"
@@ -857,6 +960,7 @@ function ContactSection() {
 
             <div>
               <h3 className="font-semibold">Email</h3>
+
               <p className="text-muted-foreground text-sm">
                 aaditya.saxena.1357@gmail.com
               </p>
@@ -878,6 +982,7 @@ function ContactSection() {
 
             <div>
               <h3 className="font-semibold">Phone</h3>
+
               <p className="text-muted-foreground text-sm">
                 +91 90345 34246
               </p>
@@ -901,6 +1006,7 @@ function ContactSection() {
 
             <div>
               <h3 className="font-semibold">LinkedIn</h3>
+
               <p className="text-muted-foreground text-sm">
                 linkedin.com/in/aaditya-saxena22
               </p>
@@ -924,17 +1030,18 @@ function ContactSection() {
 
             <div>
               <h3 className="font-semibold">GitHub</h3>
+
               <p className="text-muted-foreground text-sm">
                 github.com/Axddi
               </p>
             </div>
           </motion.a>
-
         </div>
       </div>
     </section>
   );
 }
+
 // Footer Component
 function Footer() {
   return (
@@ -945,10 +1052,12 @@ function Footer() {
             <p className="text-muted-foreground text-sm">
               © {new Date().getFullYear()} Aaditya Saxena. All rights reserved.
             </p>
+
             <p className="text-muted-foreground text-xs mt-1">
               Built with Next.js, Tailwind CSS & Framer Motion
             </p>
           </div>
+
           <div className="flex gap-4">
             <motion.a
               href="https://github.com/Axddi"
@@ -959,6 +1068,7 @@ function Footer() {
             >
               <Github size={20} />
             </motion.a>
+
             <motion.a
               href="https://www.linkedin.com/in/aaditya-saxena22/"
               target="_blank"
@@ -968,6 +1078,7 @@ function Footer() {
             >
               <Linkedin size={20} />
             </motion.a>
+
             <motion.a
               href="mailto:aaditya.saxena.1357@gmail.com"
               whileHover={{ scale: 1.1 }}
