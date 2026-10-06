@@ -509,15 +509,6 @@ function SkillsSection() {
 // Projects Section
 function ProjectsSection() {
   const projects = [
-        {
-      title: "BluStellar AISOP",
-      description:
-      "AI-powered AIOps platform that analyzes cloud incidents, retrieves relevant approved SOPs using RAG, and provides controlled, auditable remediation recommendations.",
-      tech: ["AWS", "Bedrock", "RAG", "PostgreSQL", "ECS"],
-      github: "https://github.com/Axddi",
-      demo: null,
-      featured: true,
-    },
     {
       title: "kubeforge-cicd-platform",
       description:
@@ -545,6 +536,35 @@ function ProjectsSection() {
       demo: null,
       featured: false,
     },
+    {
+  title: "MeetMind-AI",
+  description:
+    "AI-powered meeting intelligence platform that transforms meeting transcripts into concise summaries, action items, and insights using AWS and Generative AI.",
+  tech: ["AWS", "Terraform", "S3", "Transcribe", "Bedrock", "DynamoDB"],
+  github: "https://github.com/Axddi/MEETMIND-AI",
+  demo: null,
+  featured: true,
+},
+
+{
+  title: "NeuroSync",
+  description:
+    "Scalable healthcare application designed with modern cloud architecture, infrastructure-as-code, and CI/CD automation for secure and reliable deployment.",
+  tech: ["Next.js", "AWS", "Terraform", "GitHub Actions"],
+  github: "https://github.com/Axddi/neuro-sync",
+  demo: null,
+  featured: true,
+},
+
+{
+  title: "HoneyRatan",
+  description:
+    "Freelance food delivery application built for a real-world client, featuring a Flutter mobile frontend, Node.js backend, and MySQL database for managing users, restaurants, orders, and delivery workflows.",
+  tech: ["Flutter", "Node.js", "MySQL", "REST API"],
+  github: null,
+  demo: null,
+  featured: true,
+},
     {
       title: "Segmentify",
       description:
@@ -793,48 +813,11 @@ function ResumeSection() {
     </section>
   );
 }
-
 // Contact Section
 function ContactSection() {
-  const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
-
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setLoading(true);
-
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-
-    const response = await fetch("https://formspree.io/f/xnjzekgz", {
-      method: "POST",
-      headers: {
-        "Accept": "application/json",
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        name: formData.get("name"),
-        email: formData.get("email"),
-        subject: formData.get("subject"),
-        message: formData.get("message")
-      })
-    });
-
-    const result = await response.json();
-
-    if (result.ok) {
-      setSubmitted(true);
-      form.reset();
-    } else {
-      alert("Something went wrong. Please try again.");
-    }
-
-    setLoading(false);
-  }
-
   return (
     <section id="contact" className="py-20 px-4 bg-secondary/30">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-4xl mx-auto">
 
         {/* Heading */}
         <motion.div
@@ -846,101 +829,109 @@ function ContactSection() {
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             Get In <span className="gradient-text">Touch</span>
           </h2>
-          <p className="text-muted-foreground">
-            Have a question or want to work together? Feel free to reach out!
+
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Have an opportunity, collaboration, or just want to connect?
+            Feel free to reach out.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        {/* Contact Cards */}
+        <div className="grid sm:grid-cols-2 gap-6">
 
-          {/* LEFT SIDE */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+          {/* Email */}
+          <motion.a
+            href="mailto:aaditya.saxena.1357@gmail.com"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            whileHover={{ scale: 1.02, y: -4 }}
+            className="flex items-center gap-4 p-6 bg-card border border-border rounded-xl hover:border-primary transition-all"
           >
-            <h3 className="text-2xl font-bold mb-6">Let&apos;s Connect</h3>
-            <p className="text-muted-foreground mb-8">
-              I&apos;m always interested in hearing about new opportunities,
-              collaborations, or just having a chat about cloud and DevOps technologies.
-            </p>
-          </motion.div>
+            <div className="p-3 bg-primary/10 rounded-lg">
+              <Mail className="text-primary" size={26} />
+            </div>
 
-          {/* FORM */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            <div>
+              <h3 className="font-semibold">Email</h3>
+              <p className="text-muted-foreground text-sm">
+                aaditya.saxena.1357@gmail.com
+              </p>
+            </div>
+          </motion.a>
+
+          {/* Phone */}
+          <motion.a
+            href="tel:+919034534246"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            whileHover={{ scale: 1.02, y: -4 }}
+            className="flex items-center gap-4 p-6 bg-card border border-border rounded-xl hover:border-primary transition-all"
           >
+            <div className="p-3 bg-primary/10 rounded-lg">
+              <Phone className="text-primary" size={26} />
+            </div>
 
-            {!submitted ? (
-              <form onSubmit={handleSubmit} className="space-y-4">
+            <div>
+              <h3 className="font-semibold">Phone</h3>
+              <p className="text-muted-foreground text-sm">
+                +91 90345 34246
+              </p>
+            </div>
+          </motion.a>
 
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <input
-                    name="name"
-                    required
-                    placeholder="Your name"
-                    className="w-full px-4 py-3 bg-card border border-border rounded-lg"
-                  />
+          {/* LinkedIn */}
+          <motion.a
+            href="https://www.linkedin.com/in/aaditya-saxena22/"
+            target="_blank"
+            rel="noopener noreferrer"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.02, y: -4 }}
+            className="flex items-center gap-4 p-6 bg-card border border-border rounded-xl hover:border-primary transition-all"
+          >
+            <div className="p-3 bg-primary/10 rounded-lg">
+              <Linkedin className="text-primary" size={26} />
+            </div>
 
-                  <input
-                    type="email"
-                    name="email"
-                    required
-                    placeholder="your@email.com"
-                    className="w-full px-4 py-3 bg-card border border-border rounded-lg"
-                  />
-                </div>
+            <div>
+              <h3 className="font-semibold">LinkedIn</h3>
+              <p className="text-muted-foreground text-sm">
+                linkedin.com/in/aaditya-saxena22
+              </p>
+            </div>
+          </motion.a>
 
-                <input
-                  name="subject"
-                  required
-                  placeholder="What's this about?"
-                  className="w-full px-4 py-3 bg-card border border-border rounded-lg"
-                />
+          {/* GitHub */}
+          <motion.a
+            href="https://github.com/Axddi"
+            target="_blank"
+            rel="noopener noreferrer"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.02, y: -4 }}
+            className="flex items-center gap-4 p-6 bg-card border border-border rounded-xl hover:border-primary transition-all"
+          >
+            <div className="p-3 bg-primary/10 rounded-lg">
+              <Github className="text-primary" size={26} />
+            </div>
 
-                <textarea
-                  name="message"
-                  required
-                  rows={5}
-                  placeholder="Your message..."
-                  className="w-full px-4 py-3 bg-card border border-border rounded-lg resize-none"
-                />
+            <div>
+              <h3 className="font-semibold">GitHub</h3>
+              <p className="text-muted-foreground text-sm">
+                github.com/Axddi
+              </p>
+            </div>
+          </motion.a>
 
-                <motion.button
-                  type="submit"
-                  disabled={loading}
-                  whileHover={{ scale: 1.02 }}
-                  className="w-full py-4 bg-gradient-to-r from-primary to-accent text-white rounded-lg font-medium"
-                >
-                  {loading ? "Sending..." : "Send Message"}
-                </motion.button>
-
-              </form>
-            ) : (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="p-8 bg-card border border-border rounded-xl text-center"
-              >
-                <h3 className="text-2xl font-bold mb-2 gradient-text">
-                  Message Sent Successfully 🎉
-                </h3>
-                <p className="text-muted-foreground">
-                  Thanks for reaching out! I&apos;ll get back to you soon.
-                </p>
-              </motion.div>
-            )}
-
-          </motion.div>
         </div>
       </div>
     </section>
   );
 }
-
-
 // Footer Component
 function Footer() {
   return (
