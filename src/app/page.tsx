@@ -6,6 +6,7 @@ import {
   Github,
   Linkedin,
   Mail,
+  Phone,
   Download,
   ExternalLink,
   Menu,
@@ -633,17 +634,22 @@ function ProjectsSection() {
                   </span>
                 ))}
               </div>
-              <div className="flex gap-3">
-                <motion.a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.05 }}
-                  className="flex items-center gap-2 px-4 py-2 bg-secondary rounded-lg text-sm font-medium hover:bg-secondary/80 transition-colors"
-                >
-                  <Github size={16} />
-                  Code
-                </motion.a>
+            <div className="flex gap-3">
+  {project.github && (
+    <motion.a
+      href={project.github}
+      target="_blank"
+      rel="noopener noreferrer"
+      whileHover={{ scale: 1.05 }}
+      className="flex items-center gap-2 px-4 py-2 bg-secondary rounded-lg text-sm font-medium hover:bg-secondary/80 transition-colors"
+    >
+      <Github size={16} />
+      Code
+    </motion.a>
+  )}
+
+  {project.demo && (
+              
                 {project.demo && (
                   <motion.a
                     href={project.demo}
